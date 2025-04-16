@@ -26,20 +26,22 @@ const content = [
     "With React, you define the goal and React figures out how to get there"
   ]
 ];
+function Header() {
+  return
+  (<header>
+    <img src="react-logo-xs.png" alt="React logo" />
+    <div>
+      <h1>React.js</h1>
+      <p>i.e., using the React library for rendering the UI</p>
+    </div>
+  </header>)
+}
 
 export default function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
 
   return (
     <div>
-      <header>
-        <img src="react-logo-xs.png" alt="React logo" />
-        <div>
-          <h1>React.js</h1>
-          <p>i.e., using the React library for rendering the UI</p>
-        </div>
-      </header>
-
       <div id="tabs">
         <menu>
           <button
