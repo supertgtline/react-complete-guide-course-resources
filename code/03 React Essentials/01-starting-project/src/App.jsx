@@ -5,8 +5,9 @@ import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+  let tabContent = 'Please click a button';
   function handleClick(selectedButton) {
-    console.log(selectedButton);
+    tabContent = selectedButton;
 };
   return (
     <div>
@@ -33,6 +34,7 @@ function App() {
             <TabButton onClick={() => handleClick('props')}>Props</TabButton>
             <TabButton onClick={() =>handleClick('state')}> State</TabButton>
           </menu>
+          {tabContent}
         </section>
       </main>
     </div>
