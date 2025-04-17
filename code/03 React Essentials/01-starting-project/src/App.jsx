@@ -1,14 +1,19 @@
 
+import { useState } from 'react';
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header/Header.jsx';
 import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
-  let tabContent = 'Please click a button';
+const [selectedButton, setSelectedButton] = useState('components');
+
   function handleClick(selectedButton) {
-    tabContent = selectedButton;
+    setSelectedButton(selectedButton);
+    console.log(selectedButton);
 };
+
+console.log('APP COMPNENT EXECUTING');
   return (
     <div>
       <Header />
@@ -34,7 +39,7 @@ function App() {
             <TabButton onClick={() => handleClick('props')}>Props</TabButton>
             <TabButton onClick={() =>handleClick('state')}> State</TabButton>
           </menu>
-          {tabContent}
+          {selectedButton}
         </section>
       </main>
     </div>
