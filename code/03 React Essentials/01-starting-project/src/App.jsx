@@ -25,7 +25,7 @@ function App() {
 
   console.log('APP COMPNENT EXECUTING');
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -45,7 +45,7 @@ function App() {
           {tabContent}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
